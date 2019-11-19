@@ -42,7 +42,7 @@ Options:
 
 The possible option parameters in order of how they appear in the spec are:
 
-- optname, shortname, longname, argument, hidden, optional, helptext, type, numopt
+- optname, shortname, longname, argument, hidden, textline, optional, helptext, type, numopt
 
 Argument can be used as a pattern to runtime filtering on values. For example, a string that can only
 be "-x" or "+x" is written like this:
@@ -72,6 +72,10 @@ The `hidden` parameter indicates that this option is parsed, but not shown in he
 The `groupline` parameter is cosmetic, and will cause a blank line to appear in the help output;
 this is used to group options into visual sets for complex commands. If used, this is expected
 to be the only argument for that option.
+
+The `textline` parameter is also cosmetic - this is a way to get a non-blank line in the help
+output, and is also used for grouping. If used, this is expected to be the only argument for
+that option.
 
 The `type` parameter is a strong type for the option value; the current set includes
 
