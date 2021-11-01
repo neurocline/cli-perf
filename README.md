@@ -15,3 +15,21 @@ selection and development of command-line parsing libraries.
 
 This is organized by language, for lack of a better way to do it. Some of the tools are
 not yet written in all languages.
+
+- Python
+  - [argparse](https://docs.python.org/3/library/argparse.html)
+
+## To-do
+
+- Go
+  - ~~[flag](https://golang.org/pkg/flag/)~~ can't do complex command-lines
+  - [spf13/pflag](https://github.com/spf13/pflag)
+- D
+  - [std.getopt](https://dlang.org/phobos/std_getopt.html)
+- Rust
+- C
+- C++
+
+The spec format is not precise enough yet to capture something like Git with full fidelity.
+This will be fixed, because I think generation has some interesting benefits, but also
+drawbacks. It's not something you would do for a small project, or do lightly.

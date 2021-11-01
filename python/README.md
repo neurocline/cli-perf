@@ -23,7 +23,7 @@ Benchmark #1: argparser.py
 ```
 
 This is with zero command-line arguments, but adding command-line arguments doesn't affect
-the timing at all.
+the timing much.
 
 ```
 $ hyperfine "argparser.py add --dry-run -v --interactive --edit"
@@ -39,3 +39,15 @@ library functions.
 This is probably going to be the slowest of all the command-line parsing libraries, although
 it will be interesting to see what happens with the Go standard library [`flag`](https://golang.org/pkg/flag/)
 or things built on top of it like [`spf13/pflag`](https://github.com/spf13/pflag).
+
+### non-naive approach
+
+Although it would be more complex, if you really want to do complex command-lines in Python,
+some restructuring is in order. Only the top command-line is created at startup, with the
+base options, a positional argument for the verb, and then using the partial parsing to
+pass the remaining unparsed arguments to a specific sub-parser that you create.
+
+Fortunately, if you follow the code-generation approach, experimenting with things like
+this just means writing a new generator.
+
+TBD.
